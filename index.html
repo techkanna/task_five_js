@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Task Five</title>
+    <style>
+      .secondary-section {
+        display: none;
+      }
+      #checkbox-select-form {
+        display: none;
+      }
+
+      .multiselect,
+      #output-select {
+        width: 200px;
+      }
+
+      .selectBox {
+        position: relative;
+      }
+
+      .selectBox select {
+        width: 100%;
+      }
+
+      .overSelect {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+      }
+
+      #checkboxes {
+        display: none;
+        border: 1px #dadada solid;
+      }
+
+      #checkboxes label {
+        display: block;
+      }
+
+      #checkboxes label:hover {
+        background-color: #1e90ff;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="width: 80%; margin: 3rem auto;">
+      <section class="initial-section">
+        <form id="times">
+          <label for="number">Input</label>
+          <input type="text" name="number" id="number" /><small
+            class="alert"
+          ></small>
+          <br />
+          <br />
+          <label>Check Box</label>
+          <input
+            type="radio"
+            name="checkbox"
+            class="checkbox"
+            id="yes"
+            checked
+          />
+          <label for="yes">yes</label>
+          <input type="radio" name="checkbox" class="checkbox" id="no" />
+          <label for="no">no</label>
+          <br />
+          <br />
+          <input type="submit" value="submit" />
+        </form>
+      </section>
+      <br />
+      <br />
+      <br />
+      <section class="secondary-section">
+        <form id="secondary-Form" style="margin-bottom: 1rem;">
+          <div class="n-options"></div>
+          <input type="submit" value="submit" />
+        </form>
+      </section>
+      <section class="output"></section>
+
+      <form id="checkbox-select-form">
+        <div class="multiselect">
+          <div class="selectBox" onclick="showCheckboxes()">
+            <select>
+              <option class="default-select">Select an option</option>
+            </select>
+            <div class="overSelect"></div>
+          </div>
+          <div id="checkboxes"></div>
+        </div>
+      </form>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
